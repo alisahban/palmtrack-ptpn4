@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Formulir (F1-F6) - PTPN IV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body { background-color: #f8f9fa; }
+        .sidebar { width: 250px; min-height: 100vh; background: #212529; color: white; padding: 1rem; }
+        .nav-link { color: white; margin-bottom: 0.5rem; }
+        .nav-link.active { background-color: #198754; }
+        .nav-link:hover { background-color: #343a40; }
+        .card-header h5 { margin-bottom: 0; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+            <img src="../assets/css/img/logo-ptpn4.png" alt="Logo" width="30" class="me-2"> PTPN IV
+        </a>
+        <div class="ms-auto">
+            <span class="navbar-text text-white me-3">Selamat Datang, Guest!</span>
+            <a class="btn btn-danger btn-sm" href="../login.html">Logout</a>
+        </div>
+    </div>
+</nav>
+
+<div class="d-flex">
+    <div class="sidebar d-flex flex-column">
+        <h5 class="text-center">Menu Navigasi</h5>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fas fa-home me-2"></i>Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="input.html"><i class="fas fa-keyboard me-2"></i>Input LHP</a></li>
+            <li class="nav-item"><a class="nav-link" href="lhp.html"><i class="fas fa-file-alt me-2"></i>Lihat LHP</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-file-contract me-2"></i>Ringkasan F1-F6</a></li>
+            <li class="nav-item"><a class="nav-link" href="capaian_produksi.html"><i class="fas fa-chart-line me-2"></i>Capaian Produksi</a></li>
+            <li class="nav-item"><a class="nav-link" href="evaluasi_kinerja.html"><i class="fas fa-clipboard-check me-2"></i>Evaluasi Kinerja</a></li>
+        </ul>
+        <hr>
+        <div class="small text-center">© 2025 PTPN IV</div>
+    </div>
+
+    <div class="container-fluid p-4">
+        <h4 class="mb-3">Data Ringkasan BKK - 20 Februari 2026</h4>
+        <div class="row">
+
+            <div class="col-lg-6 col-xl-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-success text-white"><h5>F1: Laporan Produksi Harian</h5></div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Total Produksi TBS <span><strong>25.500 Kg</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Jumlah Tandan (TDN) <span><strong>3.725 Tandan</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Rata-rata Berat Tandan (RBT) <span><strong>13.42 Kg</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Luas Areal Panen <span><strong>364.74 Ha</strong></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-success text-white"><h5>F2: Laporan Angkutan & Restan</h5></div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Total Diangkut ke PKS <span><strong>49.990 Kg</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Jumlah Truk <span><strong>10 Unit</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Sisa (Restan) di Lapangan <span><strong>19.985 Kg</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Sisa (Restan) di Truk <span><strong>0 Kg</strong></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-success text-white"><h5>F3: Laporan Tenaga Kerja (HK)</h5></div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Kebutuhan HK <span><strong>265 HK</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">HK Tersedia <span><strong>161 HK</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">HK Realisasi <span><strong>111 HK</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">% Absensi <span class="text-danger"><strong>31.06%</strong></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white"><h5>F4: Laporan Bulanan (Februari)</h5></div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Rencana Produksi <span><strong>3.800.000 Kg</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Realisasi Produksi <span><strong>3.600.000 Kg</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Pencapaian vs Rencana <span class="text-primary"><strong>94.74%</strong></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white"><h5>F5: Laporan Mutu Buah (Sortasi)</h5></div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Buah Matang <span><strong>1.521 Tandan</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Buah Mentah <span><strong>121 Tandan</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Buah Busuk/Abnormal <span><strong>46 Tandan</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">% Buah Mentah <span class="text-warning"><strong>7.17%</strong></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white"><h5>F6: Rencana Kerja Tahunan (RKAP)</h5></div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Target Produksi 2026 <span><strong>45.000.000 Kg</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Realisasi s/d Hari Ini <span><strong>7.850.000 Kg</strong></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Pencapaian Tahunan <span class="text-success"><strong>17.44%</strong></span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

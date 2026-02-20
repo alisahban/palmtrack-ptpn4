@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Afdeling - PTPN IV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background-color: #f8f9fa; }
+        .sidebar { width: 250px; min-height: 100vh; background: #212529; color: white; padding: 1rem; }
+        .nav-link { color: white; margin-bottom: 0.5rem; }
+        .nav-link.active { background-color: #198754; }
+        .nav-link:hover { background-color: #343a40; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+            <img src="../assets/css/img/logo-ptpn4.png" alt="Logo" width="30" class="me-2"> PTPN IV
+        </a>
+        <div class="ms-auto">
+            <span class="navbar-text text-white me-3">Selamat Datang, Guest!</span>
+            <a class="btn btn-danger btn-sm" href="../login.html">Logout</a>
+        </div>
+    </div>
+</nav>
+
+<div class="d-flex">
+    <div class="sidebar d-flex flex-column">
+        <h5 class="text-center">Menu Navigasi</h5>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fas fa-home me-2"></i>Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="input.html"><i class="fas fa-keyboard me-2"></i>Input LHP</a></li>
+            <li class="nav-item"><a class="nav-link" href="lhp.html"><i class="fas fa-file-alt me-2"></i>Lihat LHP</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-chart-line me-2"></i>Detail Afdeling</a></li>
+        </ul>
+        <hr>
+        <div class="small text-center">© 2025 PTPN IV</div>
+    </div>
+
+    <div class="container-fluid p-4">
+        <h4 class="mb-3">Ringkasan Kinerja Afdeling I - 20 Februari 2026</h4>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card text-white bg-success h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Produksi Hari Ini</h5>
+                        <p class="card-text fs-4">25.500 Kg</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card text-white bg-primary h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">RBT Hari Ini</h5>
+                        <p class="card-text fs-4">13.95 Kg</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card text-dark bg-warning h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Luas Panen</h5>
+                        <p class="card-text fs-4">40.30 Ha</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card text-white bg-danger h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Tenaga Panen</h5>
+                        <p class="card-text fs-4">13 HK</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-white font-weight-bold">Realisasi vs Rencana Produksi Harian (Bulan Ini)</div>
+                    <div class="card-body"><canvas id="produksiChart"></canvas></div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-white font-weight-bold">Analisa Mutu Buah (Tandan)</div>
+                    <div class="card-body"><canvas id="mutuChart"></canvas></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Chart Produksi Harian (Data Simulasi)
+    const prodCtx = document.getElementById('produksiChart').getContext('2d');
+    new Chart(prodCtx, {
+        type: 'bar',
+        data: {
+            labels: ['01', '03', '05', '07', '09', '11', '13', '15', '17', '19', '20'],
+            datasets: [{
+                label: 'Realisasi (Kg)',
+                data: [9500, 8200, 7100, 6800, 5200, 9800, 10500, 11000, 11500, 14000, 13000],
+                backgroundColor: '#198754',
+            }, {
+                label: 'Rencana (Kg)',
+                data: [11165, 8487, 6400, 6209, 4597, 10298, 11564, 11642, 12243, 15392, 13710],
+                backgroundColor: '#ffc107',
+            }]
+        },
+        options: { responsive: true, scales: { y: { beginAtZero: true } } }
+    });
+
+    // Chart Mutu Buah (Data Simulasi)
+    const mutuCtx = document.getElementById('mutuChart').getContext('2d');
+    new Chart(mutuCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Matang', 'Mentah', 'Busuk'],
+            datasets: [{
+                data: [456, 68, 14],
+                backgroundColor: ['#198754', '#ffc107', '#dc3545'],
+            }]
+        },
+        options: { responsive: true }
+    });
+</script>
+
+</body>
+</html>

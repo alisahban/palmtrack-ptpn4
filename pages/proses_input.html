@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proses Input - PTPN IV (Demo)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body { 
+            background-color: #f4f7f6; 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .success-card { 
+            max-width: 500px; 
+            text-align: center; 
+            padding: 3rem; 
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .check-icon { 
+            font-size: 80px; 
+            color: #198754; 
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="success-card">
+    <i class="fas fa-check-circle check-icon"></i>
+    <h2 class="mb-3">Data Berhasil Diproses!</h2>
+    <p class="text-muted mb-4">
+        Input Laporan Harian Produksi (LHP) telah berhasil divalidasi dan "disimpan" dalam mode simulasi portofolio statis.
+    </p>
+    <div class="d-grid gap-2">
+        <a href="input.html" class="btn btn-success btn-lg">Input Data Lagi</a>
+        <a href="../index.html" class="btn btn-outline-secondary">Kembali ke Dashboard</a>
+    </div>
+    <div class="mt-4 small text-muted">
+        Mengalihkan otomatis ke Dashboard dalam <span id="timer">5</span> detik...
+    </div>
+</div>
+
+<script>
+    // Logika pengalihan otomatis untuk demo yang lebih hidup
+    let count = 5;
+    const timerDisplay = document.getElementById('timer');
+    
+    const countdown = setInterval(() => {
+        count--;
+        timerDisplay.textContent = count;
+        if (count <= 0) {
+            clearInterval(countdown);
+            window.location.href = '../index.html';
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>

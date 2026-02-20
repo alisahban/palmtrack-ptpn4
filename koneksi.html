@@ -1,0 +1,15 @@
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "nama_database_kamu"; // GANTI INI dengan nama database di phpMyAdmin
+
+try {
+    // Koneksi menggunakan PDO ke MySQL
+    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // echo "Koneksi ke MySQL berhasil!"; 
+} catch (PDOException $e) {
+    die("Koneksi ke database gagal: " . $e->getMessage());
+}
+?>

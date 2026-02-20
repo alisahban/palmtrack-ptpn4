@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - PTPN IV Unit Bukit Kausar</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/css/img/logo-ptpn4.png" alt="Logo" width="30" class="me-2"> PTPN IV
+    </a>
+    <div class="ms-auto d-flex align-items-center">
+        <span class="navbar-text text-white me-3">
+            Selamat Datang, Guest (Demo Mode)!
+        </span>
+        <a class="btn btn-danger" href="#"><i class="fas fa-sign-out-alt me-1"></i> Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="d-flex">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 250px; min-height: 100vh;">
+        <h5 class="text-center">Menu Navigasi</h5>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item mb-2"><a class="nav-link active" href="index.html"><i class="fas fa-home me-2"></i>Dashboard</a></li>
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="pages/input.html"><i class="fas fa-keyboard me-2"></i>Input LHP</a></li>
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="pages/lhp.html"><i class="fas fa-file-alt me-2"></i>Lihat LHP</a></li>
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="#"><i class="fas fa-chart-line me-2"></i>Capaian Produksi</a></li>
+            <li class="nav-item mb-2"><a class="nav-link text-white" href="#"><i class="fas fa-tasks me-2"></i>EVA</a></li>
+        </ul>
+        <hr>
+        <div class="small text-center">© 2025 PTPN IV</div>
+    </div>
+
+    <div class="container-fluid p-4">
+      <h4 class="mb-4">Dashboard PTPN IV Unit Bukit Kausar</h4>
+
+      <div class="row mb-4">
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card shadow rounded">
+            <div class="card-body text-center">
+              <h6>Produksi Bulan Ini</h6>
+              <h5 class="text-success">1.250 Ton</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card shadow rounded">
+            <div class="card-body text-center">
+              <h6>Capaian Tahun Ini</h6>
+              <h5 class="text-primary">14.300 Ton</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card shadow rounded">
+            <div class="card-body text-center">
+              <h6>Target Tahun Ini</h6>
+              <h5 class="text-info">18.000 Ton</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card shadow rounded">
+            <div class="card-body text-center">
+              <h6>Realisasi vs Target</h6>
+              <h5 class="text-warning">79,4%</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow rounded">
+        <div class="card-body">
+          <h6 class="mb-3">Grafik Produksi per Bulan (Simulasi)</h6>
+          <canvas id="chartProduksi"></canvas>
+        </div>
+      </div>
+
+      <div class="card shadow rounded mb-4">
+        <div class="card-body">
+          <h6 class="mb-3">5 Data Input Terbaru (Demo)</h6>
+          <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Tanggal</th>
+                    <th>Afdeling</th>
+                    <th>Jumlah (Ton)</th>
+                  </tr>
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>PRD001</td>
+                        <td>20/02/2026</td>
+                        <td>Afdeling I</td>
+                        <td>25.5</td>
+                    </tr>
+                    <tr>
+                        <td>PRD002</td>
+                        <td>19/02/2026</td>
+                        <td>Afdeling III</td>
+                        <td>30.2</td>
+                    </tr>
+                    <tr>
+                        <td>PRD003</td>
+                        <td>18/02/2026</td>
+                        <td>Afdeling II</td>
+                        <td>22.1</td>
+                    </tr>
+                    <tr>
+                        <td>PRD004</td>
+                        <td>17/02/2026</td>
+                        <td>Afdeling IV</td>
+                        <td>28.4</td>
+                    </tr>
+                    <tr>
+                        <td>PRD005</td>
+                        <td>16/02/2026</td>
+                        <td>Afdeling I</td>
+                        <td>24.7</td>
+                    </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const ctx = document.getElementById('chartProduksi')?.getContext('2d');
+if(ctx){
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Sep 25', 'Okt 25', 'Nov 25', 'Des 25', 'Jan 26', 'Feb 26'],
+        datasets: [{
+          label: 'Produksi (Ton)',
+          data: [1100, 1250, 1050, 1300, 1150, 1250],
+          backgroundColor: '#198754'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+      }
+    });
+}
+</script>
+</body>
+</html>

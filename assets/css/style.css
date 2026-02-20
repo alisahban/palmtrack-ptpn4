@@ -1,0 +1,68 @@
+body {
+    background: url('assets/css/img/bg_login2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.login-container {
+    background: rgba(30, 30, 30, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Dukungan untuk browser Safari */
+    border-radius: 15px;
+    padding: 2.5rem;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.login-container img {
+    width: 80px;
+    margin-bottom: 1.5rem;
+}
+
+.login-container h3 {
+    color: #fff; /* Diubah jadi putih agar konsisten */
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bayangan teks agar mudah dibaca */
+}
+
+.form-floating label {
+    color: #ddd;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.form-control:focus {
+    /* Perbaikan saat input di-klik */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: none;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control::placeholder {
+    color: #eee;
+}
+
+.btn-success {
+    background-color: rgba(40, 167, 69, 0.8);
+    border: none;
+    padding: 0.75rem;
+    transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+}
+
+.btn-success:hover {
+    background-color: rgba(40, 167, 69, 1); /* Efek hover agar lebih interaktif */
+}
